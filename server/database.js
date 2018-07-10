@@ -11,7 +11,6 @@ const connectionDB = new Sequelize(config.database, config.user, config.password
         collate: 'utf8_general_ci'
       }
     },
-  
     pool: {
       max: 5,
       min: 0,

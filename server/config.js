@@ -1,22 +1,12 @@
-// const config  = {
-//     PORT     : process.env.PORT || 8080,
-//     host     : 'eu-cdbr-west-02.cleardb.net',
-//     user     : 'b12b8db6248fd3',
-//     password : 'addd4523fc7dc92',
-//     database : 'heroku_097585ac11dbd0f'
-// };
-
 const config  = {
     PORT     : process.env.PORT || 8080,
-    host     : 'localhost',
-    user     : 'root',
-    password : 'Lipton321',
-    database : 'notebook'
+    host     : 'us-cdbr-iron-east-04.cleardb.net',
+    user     : 'bff23c277a77c0',
+    password : '0cac5d65',
+    database : 'heroku_a8e03b253066333'
 };
 
 export default config;
 
 
-//mysql://b12b8db6248fd3:424675ee@eu-cdbr-west-02.cleardb.net/heroku_097585ac11dbd0f?reconnect=true
-
-//mysql://b12b8db6248fd3:424675ee@eu-cdbr-west-02.cleardb.net/heroku_097585ac11dbd0f?reconnect=true
+//mysql://bff23c277a77c0:0cac5d65@us-cdbr-iron-east-04.cleardb.net/heroku_a8e03b253066333?reconnect=true

@@ -4,17 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm-run-all --parallel watch:build watch:server",
+    "start": "npm-run-all --parallel watch:build watch:server admin:server",
     "watch:build": "webpack --watch --mode=development",
-    "watch:server": "nodemon -e js,twig server.js --ignore frontend / --exec babel-node --presets es2015",
-    "admin:server": "npm run dev",
+    "watch:server": "nodemon -e js,twig server.js --ignore admin / --exec babel-node --presets es2015",
+    "admin:server": "npm start --prefix admin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "express-http-proxy": "^1.2.0",
     "moment": "^2.22.0",
+    "mysql2": "^1.5.3",
     "randomstring": "^1.1.5",
     "sequelize": "^4.37.4",
     "twig": "^1.10.5"
