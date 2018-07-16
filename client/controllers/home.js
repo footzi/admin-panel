@@ -4,9 +4,9 @@ const homeApi = new HomeModel;
 class HomeController {
     renderPage(req, res) {
         homeApi.getAllNotes()
-            .then(notes => {
+            .then(tests => {
                 res.render('index', {
-                    test: notes
+                    tests
                 })
             });
         

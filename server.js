@@ -7,6 +7,7 @@ import config from './server/config';
 import connectionDB from './server/database';
 import bodyParser from 'body-parser';
 import home from './server/routes/home.js';
+import test from './server/routes/test.js';
 
 const app = express();
 
@@ -26,6 +27,11 @@ app.set('twig options', {
 
 //Обработка запросов
 app.use('/', home)
+const json = {
+    name: 'Vlad',
+    female: 'Cat'
+}
+app.use('/api', test)
 
 //Синхронизаниця с БД
 connectionDB.sync({
