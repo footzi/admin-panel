@@ -6,9 +6,17 @@
   "scripts": {
     "start": "npm-run-all --parallel watch:build watch:server admin:server",
     "watch:build": "webpack --watch --mode=development",
-    "watch:server": "nodemon -e js,twig server.js --ignore admin / --exec babel-node --presets es2015",
+    "watch:server": "nodemon -e js,twig server.js --exec babel-node --presets es2015",
     "admin:server": "npm start --prefix admin",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "admin/*",
+      "client/images/",
+      "client/fonts/",
+      "client/styles/"
+    ]
   },
   "author": "",
   "license": "ISC",

@@ -6,8 +6,8 @@ import Sequelize from 'sequelize';
 import config from './server/config';
 import connectionDB from './server/database';
 import bodyParser from 'body-parser';
-import home from './server/routes/home.js';
-import test from './server/routes/test.js';
+import clientRoute from './server/routes/client.js';
+import apiRoute from './server/routes/api.js';
 
 const app = express();
 
@@ -26,12 +26,8 @@ app.set('twig options', {
 });
 
 //Обработка запросов
-app.use('/', home)
-const json = {
-    name: 'Vlad',
-    female: 'Cat'
-}
-app.use('/api', test)
+app.use('/', clientRoute)
+app.use('/api', apiRoute)
 
 //Синхронизаниця с БД
 connectionDB.sync({

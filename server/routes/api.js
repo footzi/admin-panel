@@ -6,7 +6,7 @@ const json = {
     female: 'Cat'
 }
 
-router.use('/api/test', (req, res) => {
+router.post('/test', (req, res) => {
     console.log(json)
     res.send(json)
 })

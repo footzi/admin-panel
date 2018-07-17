@@ -1,3 +1,10 @@
-h1 {
-    border: 1px solid red;
-}
+@import "./index/1.reset.scss";
+@import "./index/2.index.scss";
+@import "./index/3.lessons.scss";
+@import "./index/4.about.scss";
+@import "./index/5.contacts.scss";
+@import "./index/6.catalog.scss";
+@import "./index/carousel.scss";
+@import "./index/flickity.scss";
+@import "./index/jquery.bxslider.scss";
+@import "./index/thumbs.scss";

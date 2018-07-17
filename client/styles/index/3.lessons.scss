@@ -1,0 +1,255 @@
+/*список*/
+
+.lessons {
+	font-family: Arial, Helvetica, sans-serif;
+  	font-size: 1.5vw;
+  	color: #888888;
+}
+.lessons-title {
+	font-size: 1.8vw;
+  	color: #705290;
+}
+.lessons-introduction {
+	text-align: justify;
+	color: #705290;
+	width: 76%;
+	margin: 4% auto 0 auto;
+	background-image: url("../images/lessons-introduction-fon.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding: 4.5% 0;
+}
+/*.lessons-introduction-next-date {
+	margin-left: 3.5%;
+    margin-top: -0.8%;
+	position: absolute;
+	font-family: PhillippScript;
+    width: 10%;
+    text-align: center;
+	font-size: 1.5vw;
+	display: inline-block;
+}
+.lessons-introduction-date {
+	margin-top: 0.5%;
+	margin-left: 31%;
+	font-size: 2.6vw;
+	display: inline-block;
+}*/
+.lessons-introduction-button {
+	margin-top: 1.1%;
+    float: right;
+    margin-right: 7%;
+	cursor: pointer;
+    width: 16%;
+    text-align: center;
+	border: 1px solid #705290;
+	border-radius: 10px;
+	padding: 0.7%;
+	padding-bottom: 0.4%;
+	font-family: PhillippScript;
+	font-size: 1.5vw;
+	color: #705290;	
+}
+.lessons-info {
+	margin-top: 4%;
+}
+.lessons-info p {
+	margin-top: 0;
+}
+.lessons-info-more {
+	text-align: justify;
+	width: 76%;
+	margin: 5% auto 7% auto;
+}
+.lessons-info-more-text {
+	margin-top: 2%;
+}
+.lessons-info-more-marker {
+	width: 4.5%;
+}
+
+.lessons-list {
+	margin-top: 0%;
+}
+.lesson {
+	margin-top: 4%;
+	text-align: justify;
+	padding: 1%;
+	background-color: rgba(255, 255, 255, 0.349)
+}
+.lesson-img {
+	cursor: pointer;
+	position: absolute;
+	width: 13%;
+}
+
+.lesson-info {
+	position: absolute;
+	margin-left: 18%;
+	display: inline-block;
+
+}
+.lesson-name {
+	font-size: 2vw;
+	font-family: PhillippScript;
+	color: #705290;	
+}
+
+.lesson-more {
+	margin-top: 2%;
+	font-size: 1.2vw;
+
+}
+.lesson-button {
+	padding-bottom: 0.6%;
+	margin: 10.5% 0 0 83%;
+	float: none;
+}
+
+/*просмотр картинок*/
+
+#lessons-image-b-popup{
+    left:0;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    z-index:3;
+}
+#lessons-image-b-popup .lessons-image-b-popup-content{
+    background-color: #e6e2eb;
+    background-size: 100% 100%;
+    margin:4% auto 0 auto;
+    width:36%;
+    padding: 0 3% 1% 3%;
+}
+#lessons-image-photo-big-img {
+	width: 80%;
+}
+.lessons-image-photo-small {
+	padding-top: 0.6%;
+	border-width: 1px 0 1px 0 ; 
+	border-style:  solid;
+	border-color: #705290;
+	width:100%; 
+}
+.lessons-image-photo-small img {
+	cursor: pointer;
+	width: 20%;
+	margin-right: 5%;
+}
+.lessons-image-photo-small img:last-child {
+	margin-right:0;
+}
+.lessons-image-name {
+	margin-top: -2.3%;
+	margin-bottom:2.3%; 
+	font-size: 1.7vw;
+	font-family: PhillippScript;
+    color: #705290;
+}
+
+/*запись*/
+#lessons-b-popup{
+    left:0;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    z-index:3;
+}
+#lessons-b-popup .lessons-b-popup-content{
+    /*background-color: #e6e2eb;*/
+    background-image: url("../images/lessons/popup-lessons-fon.png");
+    background-size: 100% 100%;
+    margin:4% auto 0 auto;
+    width:50%;
+    border-radius:1%;
+    padding: 0 3% 1% 3%;
+}
+
+
+.lesson-form {
+  text-align: justify;
+}
+#b-popup-lesson-close-button {
+	color:#705290;
+	position: relative;
+	right: -4%;
+    text-align: right;
+	font-size: 1vw;
+	text-decoration:none;
+}
+#b-popup-lesson-close-button a {
+	text-decoration: none;
+}
+#b-popup-lesson-close-button p {
+	padding-top: 1%;
+}
+#b-popup-lesson-close-button p:hover {
+	color:#565656
+}
+.lesson-input {
+	margin-left: 36%;
+	display: inline-block;
+	width: 62.5%;
+}
+
+.lesson-title {
+	margin-bottom:2.5%; 
+    color: #705290;
+    font-size: 1.3vw;
+}
+.lesson-form img {
+	position: absolute;
+	display: inline-block;
+	width: 13.5%;
+}
+.lesson-form-input {
+	background-color: transparent;
+	border: 1px solid #705290;
+	color:#705290;
+	font-size: 1vw;
+	width: 100%;
+	display: block;
+	margin-bottom: 8%;
+	padding-left: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.lesson-form-input-date{
+	margin-bottom: 0;
+	padding-left: 1%;
+	width: 102.5%;
+	color:#888888;
+}
+.lesson-form-input-message {
+	font-family: Arial, Helvetica, sans-serif;
+ 	margin-top: 2%;
+    position: relative;
+    right: 57.9%;
+    display: block;
+    width: 159%;
+    padding: 1% 0 26% 1%;
+    margin-bottom: 0;
+}
+.lesson-form-button {
+	cursor: pointer;
+    margin:3% 0 2% 0;
+
+    border: 1px solid #705290;
+    border-radius: 10px;
+    padding-top: 1%;
+    font-family: PhillippScript;
+    font-size: 1.7vw;
+    color: #705290;
+    width: 20%;
+    background-color: transparent;
+}
+
+

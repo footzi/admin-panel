@@ -1,57 +1,71 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: './client/scripts/app.js',
-    output: {
-        path: path.resolve(__dirname),
-        filename: './client/bundle.js'
+  entry: "./client/scripts/app.js",
+  output: {
+    path: path.resolve(__dirname),
+    filename: "./client/bundle.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
-    module: {
-        rules: [{
-          test: /\.css/,
-            use : [
-                MiniCssExtractPlugin.loader,
-                "css-loader"
-            ]
-          }, {
-            test   : /\.scss$/,
-            use    : [
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                }, {
-                    loader: 'sass-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                }
-            ]
-        }, {
-            test: /\.js$/,
-            exclude: /(node_modules)/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['es2015']
-              }
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
             }
-          }, {
-            test   : /\.twig$/,
-            exclude: /(node_modules|bower_components)/,
-            use    : {
-              loader: 'twig-loader'
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
             }
           }
         ]
-    },
-    plugins: [
-      new MiniCssExtractPlugin({
-        filename: './client/app.css'
-      }),
-    ],
-    devtool: 'inline-cheap-module-source-map'
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["es2015"]
+          }
+        }
+      },
+      {
+        test: /\.twig$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "twig-loader"
+        }
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          "file-loader",
+          {
+            loader: "image-webpack-loader",
+            options: {
+              disable: true // webpack@2.x and newer
+            }
+          }
+        ]
+      }
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "./client/app.css"
+    })
+  ],
+  devtool: "inline-cheap-module-source-map"
 };
