@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./client/scripts/app.js",
@@ -20,6 +21,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
+              importLoaders: 2,
               sourceMap: true
             }
           },
@@ -47,25 +49,14 @@ module.exports = {
         use: {
           loader: "twig-loader"
         }
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          "file-loader",
-          {
-            loader: "image-webpack-loader",
-            options: {
-              disable: true // webpack@2.x and newer
-            }
-          }
-        ]
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "./client/app.css"
-    })
+    }),
+    new CleanWebpackPlugin([path.resolve(__dirname, "./client")])
   ],
   devtool: "inline-cheap-module-source-map"
 };

@@ -1,12 +1,13 @@
-
-@font-face {
-  font-family: 'PhillippScript';
-  src: url('../fonts/PhillippScript/PhillippScript.eot');
-  src: local('☺'), url('../fonts/PhillippScript/PhillippScript.woff') format('woff'), url('../fonts/PhillippScript.ttf') format('truetype'), url('../fonts/PhillippScript/PhillippScript.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+// @font-face {
+//   font-family: "PhillippScript";
+//   src: url("./fonts/PhillippScript/PhillippScript");
+//   src: local("☺"),
+//     url("./fonts/PhillippScript/PhillippScript.woff") format("woff"),
+//     url("./fonts/PhillippScript/PhillippScript.ttf") format("truetype"),
+//     url("./fonts/PhillippScript/PhillippScript.svg") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 body {
   background-position: center;
@@ -22,64 +23,59 @@ body {
 
 main {
   float: right;
-  width:71%;
+  width: 71%;
   outline: 0px solid red;
   margin-top: 17%;
   text-align: center;
-  padding:4% 6% 0 3%;
+  padding: 4% 6% 0 3%;
 }
 
 .nav {
-  float:left;
-  margin-top:34%;
+  float: left;
+  margin-top: 34%;
   margin-left: 1.5%;
   outline: 0px solid green;
-  width:14%;
-
-
+  width: 14%;
 }
-.navbar-button{
+.navbar-button {
   margin-top: 7%;
-  width:96%;
+  width: 96%;
 }
 
-
-.navbar-button img{
-  width:100%;
+.navbar-button img {
+  width: 100%;
 }
-.navbar-butterfly{
-    position: absolute;
-    z-index:2;
-    width: 3%;
-    margin-left: -0.5%;
+.navbar-butterfly {
+  position: absolute;
+  z-index: 2;
+  width: 3%;
+  margin-left: -0.5%;
 }
-.navbar-butterfly2{
-    position: absolute;
-    z-index:2;
-    width: 2.5%;
-    margin-top: 11%;
-    margin-left: 11.8%;
+.navbar-butterfly2 {
+  position: absolute;
+  z-index: 2;
+  width: 2.5%;
+  margin-top: 11%;
+  margin-left: 11.8%;
 }
-.navbar-butterfly3{
-    position: absolute;
-    z-index:2;
-    width: 2.5%;
-    margin-top: 21.9%;
-    margin-left: -0.8%;
+.navbar-butterfly3 {
+  position: absolute;
+  z-index: 2;
+  width: 2.5%;
+  margin-top: 21.9%;
+  margin-left: -0.8%;
 }
 
-
-
-.main-title{
-  outline:0px solid red;
+.main-title {
+  outline: 0px solid red;
   font-family: Arial;
   font-size: 2vw;
   color: #705290;
-  margin:0 10%
+  margin: 0 10%;
 }
 .main-introduction {
-  margin-top:5.5%;
-  outline:0px solid red;
+  margin-top: 5.5%;
+  outline: 0px solid red;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4vw;
   color: #888888;
@@ -89,7 +85,7 @@ main {
   text-indent: 2vw;
 }
 .main-introduction p {
-   margin: 0;
+  margin: 0;
 }
 .center {
   margin: 0;
@@ -103,7 +99,6 @@ main {
   background-size: cover;
   border: 1px solid rgba(129, 88, 159, 0.349);
   background-color: rgba(255, 255, 255, 0.349);
-  
 }
 .stock-title {
   font-family: Arial, Helvetica, sans-serif;
@@ -114,7 +109,7 @@ main {
   margin: 2.2% 0;
   outline: 0px solid red;
   font-family: Arial, Helvetica, sans-serif;
-  color:#888888;
+  color: #888888;
   font-size: 1.2vw;
   font-weight: bolder;
   line-height: 130%;
@@ -130,37 +125,35 @@ main {
   margin: 2.2% 0;
   outline: 0px solid red;
   font-family: Arial, Helvetica, sans-serif;
-  color:#888888;
+  color: #888888;
   font-size: 1.2vw;
   font-weight: bolder;
   line-height: 130%;
 }
 .stock-images {
-  outline:0px solid red;
+  outline: 0px solid red;
   margin: 3.2% 0% 4% 1.2%;
 }
-.stock-images-640{
-    display:none;
+.stock-images-640 {
+  display: none;
 }
 
 .stock-img {
-  outline:0px solid red;
-
-
+  outline: 0px solid red;
 }
 .stock-img:last-child {
   margin-right: 0;
 }
 
 .stock-button {
-  display:inline-block;
+  display: inline-block;
   width: 27%;
   border: 1px solid #705290;
   border-radius: 10px;
   padding-top: 0.3%;
   font-family: PhillippScript;
   font-size: 2vw;
-  color:#705290;
+  color: #705290;
 }
 .stock-button a {
   text-decoration: none;
@@ -170,7 +163,7 @@ main {
   border: 1px solid rgba(129, 88, 159, 0.349);
   background-color: rgba(255, 255, 255, 0.349);
   background-size: cover;
-  padding:3% 2%;
+  padding: 3% 2%;
   margin-top: 7%;
   margin-bottom: 14%;
 }
@@ -179,33 +172,33 @@ main {
 }
 .news-calendar {
   width: 14.5%;
-  margin:4% 0 0 4%;
-  float:left;
+  margin: 4% 0 0 4%;
+  float: left;
   outline: 0px solid red;
 }
 .news-calendar-img {
-  width:100%;
+  width: 100%;
 }
 .news-details {
   width: 76%;
-  margin-top:-0.5%;
+  margin-top: -0.5%;
   float: right;
   text-align: left;
   outline: 0px solid blue;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2vw;
   color: #888888;
-  }
+}
 .news-details-text {
   position: relative;
-  margin: -3.5%  4% 3% 6%;
+  margin: -3.5% 4% 3% 6%;
   outline: 0px solid yellow;
   text-indent: 1vw;
 }
 .news-details-marker {
   position: relative;
   display: inline;
-  width:4%;
+  width: 4%;
 }
 .clear {
   clear: both;
@@ -214,35 +207,35 @@ main {
   margin-top: 0;
 }
 
-footer{
+footer {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   /*margin-top: 3.1%;*/
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  outline:0px solid red;
+  outline: 0px solid red;
 }
-.footer-content{
-  outline:0px solid black;
+.footer-content {
+  outline: 0px solid black;
   font-family: Arial, Helvetica, sans-serif;
   color: #888888;
 }
-.footer-title{
-  font-size:0.8vw;
+.footer-title {
+  font-size: 0.8vw;
   font-weight: bolder;
   margin: 0;
   margin-bottom: 3%;
 }
-.footer-text{
-  font-size:0.7vw;
+.footer-text {
+  font-size: 0.7vw;
   margin: 0;
-  margin-bottom: 1%
+  margin-bottom: 1%;
 }
 
 .footer-content-regulations {
   display: inline-block;
-  outline:0px solid blue;
+  outline: 0px solid blue;
   margin-left: 23.5%;
 }
 .footer-content-regulations-title {
@@ -251,40 +244,39 @@ footer{
   font-size: 0.8vw;
 }
 
-.footer-content-icons{
+.footer-content-icons {
   width: 15%;
   position: absolute;
   display: inline-block;
-  outline:0px solid orange;
+  outline: 0px solid orange;
   margin-left: 7%;
-  margin-top:0.3%; 
+  margin-top: 0.3%;
 }
 .footer-content-icons-img {
   width: 15%;
   margin-right: 6%;
 }
 
-.footer-content-developer{
+.footer-content-developer {
   margin-left: 7.7%;
-  font-size:0.7vw;
+  font-size: 0.7vw;
   outline: 0px solid red;
   display: inline-block;
 }
 .footer-content-developer-title {
   margin-top: 1%;
-  font-size:0.7vw;
+  font-size: 0.7vw;
 }
 .footer-content-developer-title a {
   text-decoration: underline;
-  color:#888888;
+  color: #888888;
 }
-
 
 .footer-content-contacts {
   position: absolute;
   margin-left: 4.5%;
   display: inline-block;
-  outline:0px solid green;
+  outline: 0px solid green;
   text-align: right;
 }
 .footer-content-contacts-title {

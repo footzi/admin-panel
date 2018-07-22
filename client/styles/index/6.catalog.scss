@@ -1,13 +1,13 @@
 /*Первый блок с приветствием*/
-.catalog-greeting  {
-  padding-top:2.5%;
+.catalog-greeting {
+  padding-top: 2.5%;
   padding-left: 1%;
   padding-right: 1%;
   height: 100%;
-  outline:0px solid red;
+  outline: 0px solid red;
   background-size: cover;
- /* background-image: url("../images/catalog/catalog-greeting-fon.png");*/
- background-size: cover;
+  /* background-image: url("../images/catalog/catalog-greeting-fon.png");*/
+  background-size: cover;
   border: 1px solid rgba(129, 88, 159, 0.349);
   background-color: rgba(255, 255, 255, 0.349);
   margin-top: 0.5%;
@@ -31,9 +31,8 @@
 .catalog-greeting-butterfly1 {
   position: absolute;
   width: 3%;
-  margin-top:-10%;
-  margin-left:-35%;
-
+  margin-top: -10%;
+  margin-left: -35%;
 }
 
 .catalog-greeting-butterfly2 {
@@ -41,39 +40,34 @@
   position: absolute;
   margin-top: -3%;
   margin-left: 32%;
-
 }
-
-
-
 
 /*Блок с картинками*/
 
 .catalog-img {
   text-align: justify;
   outline: 0px solid red;
-  margin-top:6.5%;
-} 
+  margin-top: 6.5%;
+}
 .catalog-img-prew {
   width: 48%;
-  outline:0px solid red;
-  display:inline-block;
+  outline: 0px solid red;
+  display: inline-block;
 }
 .catalog-img-prew-right {
-  margin-left: 4%; 
+  margin-left: 4%;
 }
 
 .catalog-caption-text {
-  color:#444444;
+  color: #444444;
   font-family: PhillippScript;
   font-size: 2vw;
-
 }
 
 /*Блок с информацией*/
 .catalog-info {
   height: 100%;
-  outline:0px solid blue;
+  outline: 0px solid blue;
   /*background-image: url("../images/catalog/catalog-info-fon.png");*/
   background-size: cover;
   border: 1px solid rgba(129, 88, 159, 0.349);
@@ -90,7 +84,7 @@
 }
 
 .catalog-info-title {
-  color:#705290;
+  color: #705290;
   margin-top: 0.6%;
   font-size: 1.8vw;
   text-align: center;
@@ -109,10 +103,10 @@
 .catalog-info-text:last-child {
   margin-top: 1%;
 }
-.catalog-info-text-list{
-  margin:0;
+.catalog-info-text-list {
+  margin: 0;
 }
-.catalog-info-text-list:nth-child(6){
+.catalog-info-text-list:nth-child(6) {
   margin-bottom: 6%;
 }
 
@@ -120,39 +114,34 @@
   position: absolute;
   width: 3%;
 }
-.catalog-info-butterfly1{
+.catalog-info-butterfly1 {
   margin-top: 0;
   margin-left: -35%;
 }
 
-.catalog-info-butterfly2{
+.catalog-info-butterfly2 {
   margin-top: -5%;
   margin-left: 32%;
 }
 
-
-
-
 /*список продуктов*/
 .catalog-navigation {
-  margin-top:-34.5%;
+  margin-top: -34.5%;
   float: right;
-  
 }
 .catalog-navigation a {
   text-decoration: none;
-  color:#A9A9A9;
+  color: #a9a9a9;
   font-size: 1vw;
 }
 .catalog-navigation a:hover {
   text-decoration: underline;
-  color:#705290;
-  
+  color: #705290;
 }
 .catalog-list {
   margin-bottom: 16%;
   height: 100%;
-  outline:0px solid black;
+  outline: 0px solid black;
 }
 
 .catalog-polimer {
@@ -161,7 +150,6 @@
   padding-right: 1%;
   border: 1px solid rgba(129, 88, 159, 0.349);
   background-color: rgba(255, 255, 255, 0.349);
-
 }
 .catalog-polimer-introduction {
   margin-top: 2%;
@@ -177,33 +165,30 @@
 
 .catalog-polimer-butterfly2 {
   margin-top: -4%;
-  margin-left: 32%
+  margin-left: 32%;
 }
 
-
 /*навбар в каталоге*/
-.catalog-navbar{
+.catalog-navbar {
   border-top: 2px solid #705290;
   border-bottom: 2px solid #705290;
-  margin-top:2.2%;
+  margin-top: 2.2%;
   margin-bottom: 1.5%;
 }
 
-
 .Link {
-  color:#705290;
+  color: #705290;
   font-size: 0.9vw;
   font-weight: bolder;
   display: inline-block;
   padding: 0.7% 3%;
 }
 .Link-name {
- display: inline-block;
-  
+  display: inline-block;
 }
 .Link:hover {
   background-color: rgba(255, 255, 255, 0.5);
-  background-size: 90%; 
+  background-size: 90%;
   text-decoration: underline;
 }
 .Link-name:hover {
@@ -219,53 +204,52 @@
   text-align: justify;
 }
 .hidden {
-  display:none; 
+  display: none;
 }
 .product-preview {
   cursor: pointer;
-  color:black;
+  color: black;
   margin-top: 6%;
   margin-right: 6.5%;
   display: inline-table;
-  width:29%;
+  width: 29%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1vw;
-  
 }
 .product-preview:nth-child(3n) {
-  margin-right:0;
+  margin-right: 0;
 }
 .product-preview-img {
   box-shadow: 3px 3px rgba(0, 0, 0, 0.302);
-  width:30%;
+  width: 30%;
 }
 .product-preview-name {
   font-family: PhillippScript;
   /*text-transform: uppercase;*/
   font-size: 1.5vw;
-  color:#705290;
+  color: #705290;
   display: block;
-  margin-top:2%;
+  margin-top: 2%;
 }
 .product-preview-cost {
-  color:#6d6d6d;
+  color: #6d6d6d;
   display: block;
-  margin-top:0;
+  margin-top: 0;
   font-weight: 600;
 }
 
-.product-preview-button-img{
+.product-preview-button-img {
   cursor: pointer;
   margin-top: 2%;
   margin-left: 36%;
   position: absolute;
-  color:#705290;
+  color: #705290;
   font-family: PhillippScript;
   font-size: 1.2vw;
-  width:25%;
-  border:1px solid #705290;
-  border-radius:0.6vw;
-  padding-top:0.7%;
+  width: 25%;
+  border: 1px solid #705290;
+  border-radius: 0.6vw;
+  padding-top: 0.7%;
 }
 
 .product-preview-instock {
@@ -290,7 +274,7 @@
 .pages-link {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2vw;
-  color:#888888;
+  color: #888888;
   text-decoration: underline;
 }
 .pages-numbers {
@@ -302,57 +286,47 @@
 
 .pages-numbers-link {
   display: inline;
-  cursor:pointer;
+  cursor: pointer;
   font-size: 1.2vw;
-  color:#888888;
+  color: #888888;
   text-decoration: none;
   margin-right: 20%;
 }
 .pages-numbers-link:hover {
   font-weight: bolder;
   text-decoration: underline;
-  color:#705290;
+  color: #705290;
 }
 .pages-numbers-link-active {
   font-weight: bolder;
   text-decoration: underline;
-  color:#705290;
+  color: #705290;
 }
-
-
-
-
-
-
-
-
-
 
 /*карточка товара*/
-#b-popup{
-    left:0;
-    width:100%;
-    min-height:100%;
-    background-color: rgba(0,0,0,0.5);
-    overflow:hidden;
-    position:fixed;
-    top:0px;
-    z-index:3;
-    
+#b-popup {
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
 }
-#b-popup .b-popup-content{
-    margin:4% auto 0 auto;
-    width:65%;
+#b-popup .b-popup-content {
+  margin: 4% auto 0 auto;
+  width: 65%;
 }
 .b-popup-close-button {
-  color:#705290;
+  color: #705290;
   cursor: pointer;
   text-align: right;
   padding-top: 1.3%;
   font-size: 1vw;
 }
 .b-popup-close-button:hover {
-  color:#565656;
+  color: #565656;
 }
 .order-close-button {
   position: relative;
@@ -361,16 +335,16 @@
 }
 
 #product {
-   background-image: url("../images/catalog/product-fon.png");
-   background-size: 100% 100%;
-   padding: 0 2% 2% 2%;
+  background-image: url("images/catalog/product-fon.png");
+  background-size: 100% 100%;
+  padding: 0 2% 2% 2%;
 }
 .product-info {
   text-align: center;
-  margin-top:4%; 
+  margin-top: 4%;
   margin-right: 1%;
   width: 45%;
-  float:right;
+  float: right;
 }
 .product-info-button {
   cursor: pointer;
@@ -386,19 +360,19 @@
 }
 
 .product-info-name {
-  outline:0px solid blue;
+  outline: 0px solid blue;
   font-family: Arial, Helvetica, sans-serif;
-  color:#705290;
-  font-size: 1.3vw; 
+  color: #705290;
+  font-size: 1.3vw;
 }
 .product-info-text {
   margin-top: 10%;
   padding: 0 10%;
-  outline:0px solid blue;
+  outline: 0px solid blue;
   font-family: Arial, Helvetica, sans-serif;
-  color:#888888;
+  color: #888888;
   text-align: justify;
-  font-size: 1.1vw; 
+  font-size: 1.1vw;
   line-height: 1.3vw;
   text-indent: 1vw;
 }
@@ -413,15 +387,15 @@
   margin-top: 6%;
   margin-bottom: 9%;
   font-weight: bolder;
-  color:#888888;
+  color: #888888;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-carousel {
-  width:52%;
+  width: 52%;
 }
 #order {
-  background-image: url("../images/catalog/orderform-fon.png");
+  background-image: url("images/catalog/orderform-fon.png");
   background-size: 100% 100%;
   padding: 0 5% 2% 5%;
   width: 90%;
@@ -429,16 +403,16 @@
 }
 .order-title {
   margin-bottom: 5%;
-  outline:0px solid blue;
+  outline: 0px solid blue;
   font-family: Arial, Helvetica, sans-serif;
-  color:#705290;
-  font-size: 1.3vw; 
+  color: #705290;
+  font-size: 1.3vw;
 }
 
 .order-image {
-  margin:0 3% 3% 0;
+  margin: 0 3% 3% 0;
   float: left;
-  display:inline-table; 
+  display: inline-table;
   outline: 0px solid black;
   width: 28%;
 }
@@ -449,14 +423,14 @@
   /*height: 100%;*/
   width: 69%;
   float: right;
-  display:inline-table;
+  display: inline-table;
   outline: 0px solid red;
 }
 .order-form-input {
   background-color: transparent;
   border: 1px solid #705290;
   font-family: Arial, Helvetica, sans-serif;
-  color:#705290;
+  color: #705290;
   font-size: 1vw;
   width: 99%;
   /*height: 30%;*/
@@ -465,7 +439,7 @@
   margin-bottom: 5.2%;
 }
 
-.order-form-input-message{
+.order-form-input-message {
   padding-bottom: 21%;
   position: relative;
   left: -45%;
@@ -482,16 +456,16 @@
   font-size: 1.5vw;
   position: relative;
   right: 0.4%;
-  color:#705290;
+  color: #705290;
 }
 .order-buttons-back:hover {
-  color:#565656;
+  color: #565656;
 }
 .order-buttons-send {
   cursor: pointer;
   position: relative;
   left: 31%;
-  margin:24.1% auto 2% auto;
+  margin: 24.1% auto 2% auto;
   background-color: transparent;
   display: inline-block;
   width: 20%;
@@ -501,9 +475,7 @@
   font-family: PhillippScript;
   font-size: 2vw;
   color: #705290;
-  
 }
 .order-form-hide {
-  display:none;
+  display: none;
 }
-
