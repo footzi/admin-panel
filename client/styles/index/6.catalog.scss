@@ -45,6 +45,7 @@
 /*Блок с картинками*/
 
 .catalog-img {
+  display: flex;
   text-align: justify;
   outline: 0px solid red;
   margin-top: 6.5%;
@@ -335,7 +336,7 @@
 }
 
 #product {
-  background-image: url("images/catalog/product-fon.png");
+  background-image: url("/client/www/images/catalog/product-fon.png");
   background-size: 100% 100%;
   padding: 0 2% 2% 2%;
 }
@@ -395,7 +396,7 @@
   width: 52%;
 }
 #order {
-  background-image: url("images/catalog/orderform-fon.png");
+  background-image: url("/client/www/images/catalog/orderform-fon.png");
   background-size: 100% 100%;
   padding: 0 5% 2% 5%;
   width: 90%;

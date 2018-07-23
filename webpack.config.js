@@ -1,12 +1,11 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./client/scripts/app.js",
   output: {
     path: path.resolve(__dirname),
-    filename: "./client/bundle.js"
+    filename: "./client/www/app.js"
   },
   module: {
     rules: [
@@ -49,14 +48,25 @@ module.exports = {
         use: {
           loader: "twig-loader"
         }
+      },
+      {
+        test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              context: ""
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "./client/app.css"
-    }),
-    new CleanWebpackPlugin([path.resolve(__dirname, "./client")])
+      filename: "./client/www/app.css"
+    })
   ],
   devtool: "inline-cheap-module-source-map"
 };

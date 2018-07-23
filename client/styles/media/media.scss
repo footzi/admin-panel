@@ -1,8 +1,8 @@
 @media (max-width: 640px) {
   /*главная*/
   body {
-    /*background-image: url("../images/fon640.jpg");*/
-    background-image: url("images/fon2.jpg");
+    /*background-image: url("..//client/www/images/fon640.jpg");*/
+    background-image: url("/client/www/images/fon2.jpg");
     /*background-size: cover;
   background-position:top; */
     background-size: 100%;
@@ -12,7 +12,7 @@
     display: none;
   }
   header {
-    background-image: url("images/fon1.jpg");
+    background-image: url("/client/www/images/fon1.jpg");
     background-size: cover;
     height: 22vw;
   }
@@ -572,7 +572,7 @@
   /*футер*/
   footer {
     position: static;
-    background-image: url("images/fon3.jpg");
+    background-image: url("/client/www/images/fon3.jpg");
     background-size: cover;
     text-align: center;
     margin: -80% auto 0 auto;

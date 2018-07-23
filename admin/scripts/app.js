@@ -1,16 +1,16 @@
-import Vue from 'vue';
-import hello from '../components/hello.vue'
+import Vue from "vue";
+import test from "../components/test/test.vue";
 
 new Vue({
-    el: 'body',
-    render: h => h(hello)
-})
+  el: "body",
+  render: h => h(test)
+});
 
-const settings =  {
-    method: 'POST',
-    mode: 'cors'
-}
+const settings = {
+  method: "POST",
+  mode: "cors"
+};
 
-fetch('/api/test', settings)
-    .then(res => res.json())
-    .then(json => console.log(json))
+fetch("/api/test", settings)
+  .then(res => res.json())
+  .then(json => console.log(json));
