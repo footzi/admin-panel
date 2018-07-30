@@ -86,38 +86,20 @@
                         <img class="catalog-butterfly-img catalog-greeting-butterfly2" src="client/www/images/catalog/catalog-butterfly2.png">
                     </div>
                     <div class="catalog-img">
-                        <div class="catalog-img-prew">
-                            <a class="" href="client/www/images/catalog/polimer/inStock">
-                                <div class="catalog-thumbs">
-                                    <img src="client/www/images/catalog/1.jpg">
-                                    <div class="catalog-caption">
-                                        <span class="catalog-caption-text">
-                                            <!-- react-text: 184 -->Украшения из
-                                            <!-- /react-text -->
-                                            <br>
-                                            <!-- react-text: 186 -->полимерной глины
-                                            <!-- /react-text -->
-                                        </span>
+                        {% for category in categories %}
+                            <div class="catalog-img-prew">
+                                <a href={{category.href}}>
+                                    <div class="catalog-thumbs">
+                                         <img src={{ ('../../uploads/' ~ category.image_src) }}>
+                                        <div class="catalog-caption">
+                                            <span class="catalog-caption-text">
+                                                {{category.name}}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="catalog-img-prew catalog-img-prew-right">
-                            <a class="" href="/catalog/compositions/floral">
-                                <div class="catalog-thumbs">
-                                    <img src="client/www/images/catalog/2.jpg">
-                                    <div class="catalog-caption">
-                                        <span class="catalog-caption-text">
-                                            <!-- react-text: 193 -->Цветочные композиции
-                                            <!-- /react-text -->
-                                            <br>
-                                            <!-- react-text: 195 -->из полимерной глины
-                                            <!-- /react-text -->
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        {% endfor %}
                     </div>
                     <div class="catalog-info">
                         <img class="catalog-butterfly-img catalog-info-butterfly1" src="client/www/images/catalog/butterfly1.png">
