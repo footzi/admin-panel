@@ -1,15 +1,13 @@
-import HomeModel from '../../api/models/home.js';
-const homeApi = new HomeModel;
+import HomeModel from "../../api/models/home.js";
+const homeApi = new HomeModel();
 
 class HomeController {
     renderPage(req, res) {
-        homeApi.getAllNotes()
-            .then(tests => {
-                res.render('index', {
-                    tests
-                })
+        homeApi.getAllNotes().then(tests => {
+            res.render("home", {
+                tests
             });
-        
+        });
     }
 }
 

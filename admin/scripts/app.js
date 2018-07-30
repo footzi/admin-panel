@@ -1,16 +1,7 @@
 import Vue from "vue";
-import test from "../components/test/test.vue";
+import App from "../components/App.vue";
 
 new Vue({
-  el: "body",
-  render: h => h(test)
+    el: "#app",
+    render: h => h(App)
 });
-
-const settings = {
-  method: "POST",
-  mode: "cors"
-};
-
-fetch("/api/test", settings)
-  .then(res => res.json())
-  .then(json => console.log(json));
