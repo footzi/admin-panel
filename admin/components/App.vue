@@ -1,9 +1,11 @@
 <template>
-    <div class="container b-app">
-        <h1>Панель администрирования для сайта flower-bluses.ru</h1>
-        <categories></categories>
+    <div>
+        <div class="container b-app">
+            <h1>Панель администрирования для сайта flower-bluses.ru</h1>
+            <categories></categories>
+        </div>
+        <router-view></router-view>
     </div>
-    
 </template>
 <script>
 import Categories from "../components/categories/Categories.vue";

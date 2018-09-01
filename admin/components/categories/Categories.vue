@@ -19,22 +19,26 @@
           <td>{{category.name}}</td>
           <td>
             <img :src="'../../../uploads/' + category.image_src" :alt=category.name>
-            
           <td>
-            <button class="btn btn-success">Редактировать</button>
+            <router-link :to="`/editor/category/${category.id}`" tag="button" class="btn btn-success">Редактировать</router-link>
           </td>
           <td>
-            <button class="btn btn-danger">Удалить</button>
+            <router-link :to="`/editor/category/${category.id}`" tag="button" class="btn btn-danger">Удалить</router-link>
           </td>
         </tr>
       </tbody>
     </table>
+    <router-link :to="`/created`" tag="button" class="btn btn-success">Cоздать новую категорию</router-link>
   </div>
 </template>
 <script>
 export default {
     data: () => ({ categories: [], errors: [] }),
     created() {
+        this.getData();
+    },
+    methods: {
+      getData() {
         const settings = {
             method: "GET",
             mode: "cors"
@@ -44,6 +48,7 @@ export default {
             .then(res => res.json())
             .then(json => (this.categories = json))
             .catch(e => this.errors.push(e));
+      }
     }
 };
 </script>

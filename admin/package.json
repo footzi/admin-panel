@@ -19,6 +19,7 @@
     "vue": "^2.5.16",
     "vue-html-loader": "^1.2.4",
     "vue-loader": "^15.2.4",
+    "vue-router": "^3.0.1",
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.6.0",
@@ -26,6 +27,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3"
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
   }
 }
