@@ -1,6 +1,7 @@
 <template>
   <div class="b-categories">
     <h2>Категории товаров:</h2>
+    <router-link :to="`/created`" tag="button" class="btn btn-success" data-toggle="modal" data-target="exampleModalCenter">Cоздать новую категорию</router-link>
     <table class="table table-hover b-table">
       <thead>
         <tr>
@@ -28,7 +29,6 @@
         </tr>
       </tbody>
     </table>
-    <router-link :to="`/created`" tag="button" class="btn btn-success">Cоздать новую категорию</router-link>
   </div>
 </template>
 <script>
@@ -38,17 +38,17 @@ export default {
         this.getData();
     },
     methods: {
-      getData() {
-        const settings = {
-            method: "GET",
-            mode: "cors"
-        };
+        getData() {
+            const settings = {
+                method: "GET",
+                mode: "cors"
+            };
 
-        fetch("/api/categories", settings)
-            .then(res => res.json())
-            .then(json => (this.categories = json))
-            .catch(e => this.errors.push(e));
-      }
+            fetch("/api/categories", settings)
+                .then(res => res.json())
+                .then(json => (this.categories = json))
+                .catch(e => this.errors.push(e));
+        }
     }
 };
 </script>

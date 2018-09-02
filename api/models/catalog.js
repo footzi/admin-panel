@@ -15,7 +15,8 @@ class CategoriesModel {
 
     async setCategory(data) {
         return await Categories.create(data)
-            .then(category => console.log('ok'))
+            .then(category => category)
+            // .catch(err => console.log(err)) //не работает, пока не понятно как вызвать и пракинуть ошибку
     }
 
     async updateCategory(id, key, value) {

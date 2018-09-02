@@ -22,8 +22,14 @@ router.post("/category", (req, res) => {
     //Обработка ошибок??
     catalog
         .setCategory(req.body)
-    res.send(200);
-})
+        .then(category => {
+            res.send(201); //created https://habr.com/post/265845/
+        })
+        .catch(err => {
+            console.log(err); //не работает, пока не понятно как пракинуть ошибку
+            res.send(500); // это работает
+        })
+});
 
 router.put("/category", (req, res) => {
     const id = req.query.id;

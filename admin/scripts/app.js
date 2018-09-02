@@ -3,14 +3,20 @@ import VueRouter from "vue-router";
 import App from "../components/App.vue";
 import Editor from "../components/editor/Editor.vue";
 import Created from "../components/created/Created.vue";
+import Test from "../components/test/Test.vue";
 
 const routes = [
-    { 
-        path: "/editor/:type/:id", 
-        component: Editor 
-    }, {
-        path: "/created", 
+    {
+        path: "/editor/:type/:id",
+        component: Editor
+    },
+    {
+        path: "/created",
         component: Created
+    },
+    {
+        path: "/test",
+        component: Test
     }
 ];
 
