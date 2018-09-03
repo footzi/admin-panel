@@ -36,6 +36,30 @@
                                     >
                                     <div class="invalid-feedback">Задайте имя категории</div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-form-label">Изображение:</label>
+                                    <div class="custom-file">
+                                        <input @change="sendImage" type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                    <transition name="fade">
+                                        <div v-if="dangerAlertImage" class="alert alert-danger">
+                                            Ошибка загрузки изображения!
+                                            <p> {{error}}</p>
+                                        </div>
+                                    </transition>
+                                    <transition name="fade">
+                                        <div v-if="preloaderImage" class="modal-preloader">
+                                            <img src="images/preloader.svg" alt="Прелоадер">
+                                        </div>
+                                    </transition>
+                                    <transition name="fade">
+                                        <div v-if="imagePath" class="modal-image">
+                                            <img class="modal-image" :src=imagePath alt="Превью категории">
+                                            <button @click="deleteImage" class="btn btn-danger" >Удалить</button>
+                                        </div>
+                                    </transition>
+                                </div>
                                 <div class="modal-footer">
                                     <button type="reset" class="btn btn-secondary">Очистить</button>
                                     <input type="submit" class="btn btn-primary" value="Сохранить">
@@ -81,6 +105,10 @@ export default {
         preloader: false,
         successAlert: false,
         dangerAlert: false,
+        preloaderImage: false,
+        dangerAlertImage: false,
+        imagePath: ''
+        
     }),
     created() {},
     mounted() {
@@ -93,14 +121,14 @@ export default {
          * Отправляет данные из формы на сервер
          */
         sendData() {
-            this.data = new FormData(this.form);
+            const data = new FormData(this.form);
             this.content = false;
             this.preloader = true;
 
             fetch(`/api/category/`, {
                 method: "POST",
                 mode: "cors",
-                body: this.data
+                body: data
             })
                 .then(res => {
                     this.preloader = false;
@@ -121,11 +149,12 @@ export default {
          * Навешивает обработчики на события
          */
         bindEvents() {
-            this.inputs.forEach(input => {
-                input.addEventListener("change", () => {
-                    this.validate();
-                });
-            });
+            //Переписать, т.к влияет на изображение
+            // this.inputs.forEach(input => {
+            //     input.addEventListener("change", () => {
+            //         this.validate();
+            //     });
+            // });
         },
 
         /**
@@ -163,6 +192,63 @@ export default {
                     .querySelector("input[name=name]")
                     .classList.remove("is-invalid");
             }
+        },
+
+        sendImage(e) {
+            this.preloaderImage = true;
+            const file = e.target.files[0];
+            const data = new FormData();
+
+            data.append('file', file);
+            data.append('folder', 'categories');
+
+             fetch(`/api/file/`, {
+                method: "POST",
+                mode: "cors",
+                body: data
+            })
+            .then(res => {
+                this.preloaderImage = false;
+
+                if (res.ok) {
+                    return res.text();
+                } else {
+                    throw new Error(res.statusText);
+                }
+            })
+            .then(imagePath => {
+                this.imagePath = imagePath;
+            })
+            .catch(error => {
+                this.error = error.message;
+                this.dangerAlertImage = true;
+            }) //Нужно воткнуть отображение текста ошибки
+        },
+
+        /**
+         * Удаляет загруженное изображение
+         */
+        deleteImage() {
+            const data = new FormData;
+            data.append('filePath', this.imagePath);
+
+            fetch(`/api/file/`, {
+                method: "DELETE",
+                mode: "cors",
+                body: data
+            })
+            .then(res => {
+                if (res.ok) {
+                   this.imagePath = false
+                } else {
+                    throw new Error(res.statusText);
+                }
+            })
+            .catch(error => {
+                this.error = error.message;
+                this.dangerAlertImage = true;
+            }) //Нужно воткнуть отображение текста ошибки
+
         }
     }
 };

@@ -44,6 +44,26 @@
     }
 }
 
+.modal-image {
+    margin-top: 20px;
+
+    img {
+        max-width: 200px;
+        display: block;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+//Вынести куда-нибудь
 .fade-enter-active {
     transition: all 0.3s ease;
 }
