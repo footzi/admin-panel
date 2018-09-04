@@ -1,9 +1,9 @@
 import Vue from "vue";
+import Vuex from "vuex";
 import VueRouter from "vue-router";
 import App from "../components/App.vue";
 import Editor from "../components/editor/Editor.vue";
 import Created from "../components/created/Created.vue";
-import Test from "../components/test/Test.vue";
 
 const routes = [
     {
@@ -13,10 +13,6 @@ const routes = [
     {
         path: "/created",
         component: Created
-    },
-    {
-        path: "/test",
-        component: Test
     }
 ];
 

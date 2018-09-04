@@ -19,7 +19,7 @@
           <td>{{category.href}}</td>
           <td>{{category.name}}</td>
           <td>
-            <img :src="'../../../uploads/' + category.image_src" :alt=category.name>
+            <img :src="category.image_src" :alt=category.name>
           <td>
             <router-link :to="`/editor/category/${category.id}`" tag="button" class="btn btn-success">Редактировать</router-link>
           </td>

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <router-link to="/test">Test</router-link>
         <div class="container b-app">
             <h1>Панель администрирования для сайта flower-bluses.ru</h1>
             <categories></categories>
@@ -10,12 +9,10 @@
 </template>
 <script>
 import Categories from "../components/categories/Categories.vue";
-import Test from "../components/test/Test.vue";
 
 export default {
     components: {
-        Categories,
-        Test
+        Categories
     }
 };
 </script>

@@ -40,12 +40,13 @@
                                     <label class="col-form-label">Изображение:</label>
                                     <div class="custom-file">
                                         <input @change="sendImage" type="file" class="custom-file-input" id="customFile">
+                                        <input type="hidden" name="image_src" :value=imagePath >
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                     <transition name="fade">
                                         <div v-if="dangerAlertImage" class="alert alert-danger">
-                                            Ошибка загрузки изображения!
-                                            <p> {{error}}</p>
+                                            <p>{{ error.title }}</p>
+                                            <p>{{ error.content }}</p>
                                         </div>
                                     </transition>
                                     <transition name="fade">
@@ -100,7 +101,7 @@ export default {
     data: () => ({
         href: null,
         name: null,
-        error: "",
+        error: {title: '', content: ''},
         content  : true,
         preloader: false,
         successAlert: false,
@@ -113,7 +114,7 @@ export default {
     created() {},
     mounted() {
         this.form = document.querySelector("form");
-        this.inputs = this.form.querySelectorAll("input");
+        this.inputs = this.form.querySelectorAll("input.form-control");
         this.bindEvents();
     },
     methods: {
@@ -149,12 +150,11 @@ export default {
          * Навешивает обработчики на события
          */
         bindEvents() {
-            //Переписать, т.к влияет на изображение
-            // this.inputs.forEach(input => {
-            //     input.addEventListener("change", () => {
-            //         this.validate();
-            //     });
-            // });
+            this.inputs.forEach(input => {
+                input.addEventListener("change", () => {
+                    this.validate();
+                });
+            });
         },
 
         /**
@@ -194,6 +194,9 @@ export default {
             }
         },
 
+        /**
+         * Отправляет и сохраняет загруженное изображение
+         */
         sendImage(e) {
             this.preloaderImage = true;
             const file = e.target.files[0];
@@ -220,7 +223,8 @@ export default {
                 this.imagePath = imagePath;
             })
             .catch(error => {
-                this.error = error.message;
+                this.error.title = "Ошибка при загрузке изображения";
+                this.error.content = error.message;
                 this.dangerAlertImage = true;
             }) //Нужно воткнуть отображение текста ошибки
         },
@@ -228,7 +232,9 @@ export default {
         /**
          * Удаляет загруженное изображение
          */
-        deleteImage() {
+        deleteImage(e) {
+            e.preventDefault();
+
             const data = new FormData;
             data.append('filePath', this.imagePath);
 
@@ -245,7 +251,8 @@ export default {
                 }
             })
             .catch(error => {
-                this.error = error.message;
+                this.error.title = "Ошибка при удалении изображения";
+                this.error.content = error.message;
                 this.dangerAlertImage = true;
             }) //Нужно воткнуть отображение текста ошибки
 

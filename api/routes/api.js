@@ -24,6 +24,7 @@ router.get("/category", (req, res) => {
 
 router.post("/category", (req, res) => {
     //Обработка ошибок??
+    console.log(req.body);
     catalog
         .setCategory(req.body)
         .then(category => {
@@ -57,7 +58,7 @@ router.delete('/file', (req, res) => {
     const filePath = req.body.filePath;
 
     deleteFile(filePath)
-        .then(res.send(500))
+        .then(res.send(200))
         .then(err => res.send(500, err)) //Тоже пока не понятно как прокинуть ошибку)
 })
 
