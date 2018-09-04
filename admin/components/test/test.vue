@@ -1,8 +1,9 @@
-
 <template>
-  <div>
-    <h1>Hello Worldd!</h1>
-  </div>
+  <transition name="slide-fade">
+    <div class="test">
+      <h1>Hello Worldd!</h1>
+    </div>
+  </transition>
 </template>
 <script>
 import "./test.scss";

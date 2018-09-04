@@ -1,6 +1,7 @@
 <template>
   <div class="b-categories">
     <h2>Категории товаров:</h2>
+    <router-link :to="`/created`" tag="button" class="btn btn-success" data-toggle="modal" data-target="exampleModalCenter">Cоздать новую категорию</router-link>
     <table class="table table-hover b-table">
       <thead>
         <tr>
@@ -18,13 +19,12 @@
           <td>{{category.href}}</td>
           <td>{{category.name}}</td>
           <td>
-            <img :src="'../../../uploads/' + category.image_src" :alt=category.name>
-            
+            <img :src="category.image_src" :alt=category.name>
           <td>
-            <button class="btn btn-success">Редактировать</button>
+            <router-link :to="`/editor/category/${category.id}`" tag="button" class="btn btn-success">Редактировать</router-link>
           </td>
           <td>
-            <button class="btn btn-danger">Удалить</button>
+            <router-link :to="`/editor/category/${category.id}`" tag="button" class="btn btn-danger">Удалить</router-link>
           </td>
         </tr>
       </tbody>
@@ -35,15 +35,20 @@
 export default {
     data: () => ({ categories: [], errors: [] }),
     created() {
-        const settings = {
-            method: "GET",
-            mode: "cors"
-        };
+        this.getData();
+    },
+    methods: {
+        getData() {
+            const settings = {
+                method: "GET",
+                mode: "cors"
+            };
 
-        fetch("/api/categories", settings)
-            .then(res => res.json())
-            .then(json => (this.categories = json))
-            .catch(e => this.errors.push(e));
+            fetch("/api/categories", settings)
+                .then(res => res.json())
+                .then(json => (this.categories = json))
+                .catch(e => this.errors.push(e));
+        }
     }
 };
 </script>

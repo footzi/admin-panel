@@ -9,10 +9,14 @@ module.exports = {
     mode: "development",
     entry: "./scripts/app.js",
     output: {
-        path: path.resolve(__dirname),
-        filename: "./www/bundle.js"
+        path: path.resolve(__dirname, "www"),
+        filename: "bundle.js",
+        publicPath: "/"
     },
     devServer: {
+        contentBase: path.join(__dirname, "www"),
+        historyApiFallback: true,
+        publicPath: "/",
         hot: true,
         watchOptions: {
             poll: true
@@ -69,9 +73,10 @@ module.exports = {
         // }),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            filename: path.resolve(__dirname, "./www/index.html"),
-            template: path.resolve(__dirname, "./www/index.html"),
-            inject: true
+            filename: path.resolve(__dirname, "www/index.html"),
+            template: path.resolve(__dirname, "www/index.html"),
+            inject: true,
+            alwaysWriteToDisk: true
         }),
         new webpack.HotModuleReplacementPlugin()
     ],
