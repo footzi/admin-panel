@@ -1,41 +1,52 @@
 import express from "express";
 import Catalog from "../models/catalog";
-import writeFile from '../utils/write-file';
-import deleteFile from '../utils/delete-file';
+import writeFile from "../utils/write-file";
+import deleteFile from "../utils/delete-file";
 
 const router = express.Router();
 const catalog = new Catalog();
 
-
+/**
+ * Получение всех категорий
+ */
 router.get("/categories", (req, res) => {
     catalog
         .getAllCategories()
-        .then(categories => res.send(categories))
+        .then(categories => res.send(200, categories))
         .catch(e => res.send("500", e));
 });
 
+/**
+ * Получение одной категории по id
+ */
 router.get("/category", (req, res) => {
     const id = req.query.id;
     catalog
         .getCategory(id)
-        .then(category => res.send(category))
+        .then(category => res.send(200, category))
         .catch(e => res.send("500", e));
 });
 
+/**
+ * Создание категории
+ */
 router.post("/category", (req, res) => {
     //Обработка ошибок??
     console.log(req.body);
     catalog
-        .setCategory(req.body)
+        //.setCategory(req.body)
         .then(category => {
             res.send(201); //created https://habr.com/post/265845/
         })
         .catch(err => {
             console.log(err); //не работает, пока не понятно как прокинуть ошибку
             res.send(500); // это работает
-        })
+        });
 });
 
+/**
+ * Обновление категории
+ */
 router.put("/category", (req, res) => {
     const id = req.query.id;
     const update = req.body;
@@ -45,21 +56,27 @@ router.put("/category", (req, res) => {
     res.send(200);
 });
 
-router.post('/file', (req, res) => {
+/**
+ * Загрузка файла (пока только изображение)
+ */
+router.post("/file", (req, res) => {
     const file = req.files.file;
     const folder = req.body.folder;
 
     writeFile(file, folder)
         .then(fileName => res.send(200, fileName))
-        .catch(err => res.send(500, err)) //Тоже пока не понятно как прокинуть ошибку
-})
+        .catch(err => res.send(500, err)); //Тоже пока не понятно как прокинуть ошибку
+});
 
-router.delete('/file', (req, res) => {
+/**
+ * Удаление файла (пока только изображение)
+ */
+router.delete("/file", (req, res) => {
     const filePath = req.body.filePath;
 
     deleteFile(filePath)
         .then(res.send(200))
-        .then(err => res.send(500, err)) //Тоже пока не понятно как прокинуть ошибку)
-})
+        .then(err => res.send(500, err)); //Тоже пока не понятно как прокинуть ошибку)
+});
 
 export default router;
